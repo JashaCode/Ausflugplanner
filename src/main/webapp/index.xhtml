@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Ausflugsplanner</title>
+    </h:head>
+    <h:body>
+        <h3>Planen Sie Ihren idealen Ausflug</h3>
+        <h:form>
+            <h:outputLabel value="Tag: " for="tag"/><br/>
+            <h:selectOneMenu value="#{ausflugBean.tag}">
+                <f:selectItem itemValue="" itemLabel="" />
+                <f:selectItem itemValue="Wochentag" itemLabel="Wochentag" />
+                <f:selectItem itemValue="Wochenende" itemLabel="Wochenende" />
+            </h:selectOneMenu>
+            <br/><br/>
+            <h:outputLabel value="Wetter:" for="wetter"/><br/>
+            <h:selectOneMenu value="#{ausflugBean.wetter}">
+                <f:selectItem itemValue="" itemLabel="" />
+                <f:selectItem itemValue="Schönes Wetter" itemLabel="Schönes Wetter" />
+                <f:selectItem itemValue="Regenwetter" itemLabel="Regenwetter" />
+            </h:selectOneMenu>
+            <br/><br/>
+            <h:outputLabel value="Schule:" for="schule"/><br/>
+            <h:selectOneMenu value="#{ausflugBean.schule}">
+                <f:selectItem itemValue="" itemLabel="" />
+                <f:selectItem itemValue="Schulferien" itemLabel="Schulferien" />
+                <f:selectItem itemValue="Schule" itemLabel="Schule" />
+            </h:selectOneMenu>
+            <br/><br/>
+            <h:outputLabel value="Zeit:" for="zeit"/><br/>
+            <h:selectOneMenu value="#{ausflugBean.zeit}">
+                <f:selectItem itemValue="" itemLabel="" />
+                <f:selectItem itemValue="Tagsüber" itemLabel="Tagsüber" />
+                <f:selectItem itemValue="Abend" itemLabel="Abend" />
+            </h:selectOneMenu>
+            <br/><br/>
+            <h:outputLabel value="Kinder:" for="kinder"/><br/>
+            <h:selectOneMenu value="#{ausflugBean.kinder}">
+                <f:selectItem itemValue="" itemLabel="" />
+                <f:selectItem itemValue="Mit Kindern" itemLabel="Mit Kindern" />
+                <f:selectItem itemValue="ohne Kinder" itemLabel="ohne Kinder" />
+            </h:selectOneMenu>
+            <br/><br/>
+            <h:commandButton id="button" value="Eingeben" action="#{ausflugBean.chooseTrip}"/>
+            <h:commandButton id="buttonNext" value="Ausflüge anzeigen >" action="#{ausflugBean.nextPage}"/>
+        </h:form>
+    </h:body>
+</html>
+
